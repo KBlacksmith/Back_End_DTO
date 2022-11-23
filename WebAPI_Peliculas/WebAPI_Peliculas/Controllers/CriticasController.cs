@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI_Peliculas.DTOs;
@@ -12,10 +15,13 @@ namespace WebAPI_Peliculas.Controllers
     {
         private readonly ApplicationDbContext dbContext;
         private readonly IMapper mapper;
-        public CriticasController(ApplicationDbContext dbContext, IMapper mapper)
+        private readonly UserManager<IdentityUser> userManager;
+        public CriticasController(ApplicationDbContext dbContext, IMapper mapper, 
+            UserManager<IdentityUser> userManager)
         {
             this.dbContext = dbContext;
             this.mapper = mapper;
+            this.userManager = userManager;
         }
         [HttpGet]
         public async Task<ActionResult<List<CriticaDTO>>> Get(int peliculaId)
@@ -30,8 +36,13 @@ namespace WebAPI_Peliculas.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult> Post(int peliculaId, CriticaCreacionDTO criticaCreacionDTO)
         {
+            var emailClaim = HttpContext.User.Claims.Where(claim => claim.Type == "email").FirstOrDefault();
+            var email = emailClaim.Value;
+            var usuario = await userManager.FindByEmailAsync(email);
+            var usuarioId = usuario.Id;
             var existe = await dbContext.Peliculas.AnyAsync(peliculaDB => peliculaDB.Id == peliculaId);
             if (!existe)
             {
@@ -39,6 +50,7 @@ namespace WebAPI_Peliculas.Controllers
             }
             var critica = mapper.Map<Critica>(criticaCreacionDTO);
             critica.PeliculaId = peliculaId;
+            critica.UsuarioId = usuarioId;
             dbContext.Add(critica);
             await dbContext.SaveChangesAsync();
             return Ok();

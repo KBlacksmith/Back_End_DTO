@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj": {}
+    "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj": {
+    "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj",
+        "projectUniqueName": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj",
         "projectName": "WebAPI_Peliculas",
-        "projectPath": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj",
+        "projectPath": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\WebAPI_Peliculas.csproj",
         "packagesPath": "C:\\Users\\kenne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\obj\\",
+        "outputPath": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kenne\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

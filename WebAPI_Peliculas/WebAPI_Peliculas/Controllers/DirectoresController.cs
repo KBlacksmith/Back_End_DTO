@@ -5,11 +5,13 @@ using WebAPI_Peliculas.Filtros;
 using Microsoft.AspNetCore.Authorization;
 using WebAPI_Peliculas.DTOs;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebAPI_Peliculas.Controllers
 {
     [ApiController]
     [Route("api/directores")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "EsAdmin")]
     public class DirectoresController : ControllerBase
     {
         private readonly ApplicationDbContext dbContext;
@@ -23,12 +25,15 @@ namespace WebAPI_Peliculas.Controllers
         
 
         [HttpGet]
+        [AllowAnonymous]
+        //Obtener todos
         public async Task<ActionResult<List<DirectorDTO>>> Get()
         {
             var directores = await dbContext.Directores.ToListAsync();
             return mapper.Map<List<DirectorDTO>>(directores);
         }
         [HttpGet("{id:int}")]
+        [AllowAnonymous]
         public async Task<ActionResult<DirectorDTO>> Get(int id)
         {
             var director = await dbContext.Directores.FirstOrDefaultAsync(x => x.Id == id);
@@ -39,6 +44,7 @@ namespace WebAPI_Peliculas.Controllers
             return mapper.Map<DirectorDTO>(director);
         }
         [HttpGet("{nombre}")]
+        [AllowAnonymous]
         public async Task<ActionResult<List<DirectorDTO>>> Get([FromRoute] string nombre)
         {
             var directores = await dbContext.Directores.Where(directorBD => directorBD.Nombre.Contains(nombre)).ToListAsync();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i+VguSrjkh/uXH22o0TqjPZYl8P60FI5ZwdWlIxOYIQ=",
+  "Hash": "7T6PxXvCh8cMCHPlSbkCyThIEnxF3j20vUhNGfgXT8o=",
   "Source": "WebAPI_Peliculas",
   "BasePath": "_content/WebAPI_Peliculas",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebAPI_Peliculas\\wwwroot",
       "Source": "WebAPI_Peliculas",
-      "ContentRoot": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
       "BasePath": "_content/WebAPI_Peliculas",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\Peliculas.txt",
+      "Identity": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\Peliculas.txt",
       "SourceId": "WebAPI_Peliculas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
       "BasePath": "_content/WebAPI_Peliculas",
       "RelativePath": "Peliculas.txt",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Peliculas.txt"
     },
     {
-      "Identity": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\registrosConsultados.txt",
+      "Identity": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\registrosConsultados.txt",
       "SourceId": "WebAPI_Peliculas",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kenne\\Downloads\\output\\DesarrolloWeb_BackEnd-main\\Back-End\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kenne\\git-repos\\Back_End_DTO\\WebAPI_Peliculas\\WebAPI_Peliculas\\wwwroot\\",
       "BasePath": "_content/WebAPI_Peliculas",
       "RelativePath": "registrosConsultados.txt",
       "AssetKind": "All",
